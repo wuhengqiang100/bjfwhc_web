@@ -11,9 +11,9 @@
           <!-- <ranking-board /> -->
           <div style="width:75%">
 
-            <cards />
+            <cardsTop />
             <span style="margin-top:2%" />
-            <cards />
+            <cardsBottom />
           </div>
           <div style="width:25%">
             <scroll-board />
@@ -45,7 +45,8 @@ import topHeader from './topHeader'
 // import roseChart from './roseChart'
 // import waterLevelChart from './waterLevelChart'
 import scrollBoard from './scrollBoard'
-import cards from './cards'
+import cardsTop from './cardsTop'
+import cardsBottom from './cardsBottom'
 import decora from './decora'
 
 export default {
@@ -57,7 +58,8 @@ export default {
     // roseChart,
     // waterLevelChart,
     scrollBoard,
-    cards,
+    cardsTop,
+    cardsBottom,
     // eslint-disable-next-line vue/no-unused-components
     decora
   },
