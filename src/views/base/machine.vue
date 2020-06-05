@@ -228,7 +228,7 @@
     <el-dialog
       :title="textMap[dialogStatus]"
       :visible.sync="dialogFormVisible"
-      width="50%"
+      width="35%"
     >
       <el-form
         ref="dataForm"

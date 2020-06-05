@@ -81,7 +81,7 @@
 
     <pagination v-show="total>0" :total="total" :page.sync="listQuery.page" :limit.sync="listQuery.limit" @pagination="getList" />
 
-    <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible" width="40%">
+    <el-dialog :title="textMap[dialogStatus]" :visible.sync="dialogFormVisible" width="35%">
       <el-form ref="dataForm" :rules="rules" :model="temp" label-position="left" size="mini" label-width="100px" style="width: 500px; margin-left:50px;">
 
         <el-form-item label="人员编号" prop="operatorCode">

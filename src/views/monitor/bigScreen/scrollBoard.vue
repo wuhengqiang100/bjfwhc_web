@@ -9,55 +9,48 @@
 </template>
 
 <script>
+import { fetchListMachineWarning } from '@/api/monitor'
+
 export default {
   name: 'ScrollBoard',
   data() {
     return {
-      config: {
-        header: ['站点', '报警描述'],
-        data: [
-          ['站点0001', '这是一条报警描述1'],
-          ['站点0002', '这是一条报警描述1'],
-          ['站点0003', '这是一条报警描述1'],
-          ['站点0004', '这是一条报警描述1'],
-          ['站点0005', '这是一条报警描述1'],
-          ['站点0006', '这是一条报警描述1'],
-          ['站点0007', '这是一条报警描述1'],
-          ['站点0008', '这是一条报警描述1'],
-          ['站点0009', '这是一条报警描述1'],
-          ['站点0010', '这是一条报警描述1'],
-          ['站点0011', '这是一条报警描述1'],
-          ['站点0012', '这是一条报警描述1'],
-          ['站点0013', '这是一条报警描述1'],
-          ['站点0014', '这是一条报警描述1'],
-          ['站点0015', '这是一条报警描述1'],
-          ['站点0016', '这是一条报警描述1'],
-          ['站点0017', '这是一条报警描述1'],
-          ['站点0018', '这是一条报警描述1'],
-          ['站点0019', '这是一条报警描述1'],
-          ['站点0020', '这是一条报警描述1'],
-          ['站点0021', '这是一条报警描述1'],
-          ['站点0022', '这是一条报警描述1'],
-          ['站点0023', '这是一条报警描述1'],
-          ['站点0024', '这是一条报警描述1'],
-          ['站点0025', '这是一条报警描述1']
-          // ['2019-07-02 17:25:00', '路面危害-路面油污清理', '13', 'xxxxxxx'],
-
-        ],
-        index: true,
-        columnWidth: [65, 110],
-        align: ['center'],
-        rowNum: 20,
-        headerBGC: '#1981f6',
-        headerHeight: 45,
-        oddRowBGC: 'rgba(0, 44, 81, 0.8)',
-        evenRowBGC: 'rgba(10, 29, 50, 0.8)',
-        carousel: 'single',
-        indexHeader: '序号'
-      }
+      config: {}
     }
   },
+  // create() {
+  //   const { createData } = this
+
+  //   createData()
+
+  //   setInterval(this.createData, 3000)
+  // },
+  mounted() {
+    const { createData } = this
+
+    createData()
+
+    setInterval(this.createData, 3000)
+  },
   methods: {
+    createData() {
+      fetchListMachineWarning().then(response => {
+        this.config = {
+          header: ['站点', '报警描述'],
+          data: response.warnings,
+          index: true,
+          columnWidth: [65, 110],
+          align: ['center'],
+          rowNum: 20,
+          headerBGC: '#1981f6',
+          headerHeight: 45,
+          oddRowBGC: 'rgba(0, 44, 81, 0.8)',
+          evenRowBGC: 'rgba(10, 29, 50, 0.8)',
+          carousel: 'single',
+          indexHeader: '序号'
+        }
+      })
+    },
     // 预留后面用来展示报警的具体信息
     testClick(row, ceil, rowIndex, columnIndex) {
       console.log(row)

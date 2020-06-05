@@ -17,6 +17,15 @@ export function fetchListCardBottom(query) {
   })
 }
 
+export function fetchListMachineWarning(query) {
+  return request({
+    url: '/monitor/warning',
+    method: 'get',
+    params: query
+    // baseURL: "http://127.0.0.1:8088"
+  })
+}
+
 export function updateUseFlag(id) {
   return request({
     url: '/monitor/updateUseFlag',
