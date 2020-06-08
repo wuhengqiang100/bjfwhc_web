@@ -30,7 +30,7 @@ export default {
 
     createData()
 
-    setInterval(this.createData, 3000)
+    setInterval(this.createData, 34000)
   },
   methods: {
     createData() {
