@@ -78,3 +78,10 @@ export function listOptionReportQa() {
   })
 }
 
+export function listOptionMachineWarningDeal() {
+  return request({
+    url: '/option/machineWarningDeal',
+    method: 'post'
+  })
+}
+

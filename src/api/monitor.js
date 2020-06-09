@@ -26,21 +26,3 @@ export function fetchListMachineWarning(query) {
   })
 }
 
-export function updateUseFlag(id) {
-  return request({
-    url: '/monitor/updateUseFlag',
-    method: 'post',
-    params: { id }
-    // baseURL: "http://127.0.0.1:8088"
-  })
-}
-
-export function createAuditParameter(data) {
-  return request({
-    url: '/monitor/create',
-    method: 'post',
-    data
-    // baseURL: "http://127.0.0.1:8088"
-  })
-}
-
