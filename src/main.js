@@ -20,6 +20,8 @@ import './icons' // icon
 import './permission' // permission control
 import './utils/error-log' // error log
 
+// import layer from 'layui-layer'
+
 import * as filters from './filters' // global filters
 
 import dataV from '@jiaminghi/data-view'
@@ -49,6 +51,7 @@ Vue.component(Table.name, 	Table)
 Vue.use(dataV)
 
 Vue.use(animated)
+// Vue.use(layer)
 // register global utility filters
 Object.keys(filters).forEach(key => {
   Vue.filter(key, filters[key])

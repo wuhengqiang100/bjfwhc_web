@@ -44,6 +44,7 @@ import xtMenuRouter from './modules/xtMenu'
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
+// const id = 1
 export const constantRoutes = [
   {
     path: '/redirect',
@@ -78,7 +79,8 @@ export const constantRoutes = [
   },
   // 重定向到大屏监控
   {
-    path: '/bigScreen',
+    // path: '/bigScreen',
+    path: '/bigScreen/:id',
     component: () => import('@/views/monitor/bigScreen/index'),
     hidden: true
   },

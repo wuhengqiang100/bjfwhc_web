@@ -60,6 +60,7 @@
     "js-cookie": "2.2.0",
     "jsonlint": "1.6.3",
     "jszip": "3.2.1",
+    "layui-layer": "^1.0.9",
     "less": "^3.9.0",
     "less-loader": "^5.0.0",
     "normalize.css": "7.0.0",

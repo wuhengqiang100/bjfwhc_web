@@ -66,7 +66,14 @@ export default {
   data() {
     return {}
   },
-  methods: {}
+  created() {
+
+  },
+  methods: {
+    getId() {
+      console.log(this.$route.params.id)
+    }
+  }
 }
 </script>
 

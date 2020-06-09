@@ -85,3 +85,10 @@ export function listOptionMachineWarningDeal() {
   })
 }
 
+export function listOptionDisplayPlatformInfo() {
+  return request({
+    url: '/option/displayPlatformInfo',
+    method: 'post'
+  })
+}
+
